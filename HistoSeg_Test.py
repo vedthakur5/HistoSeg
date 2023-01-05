@@ -102,6 +102,9 @@ print("Loading Dataset ...")
 X_test = np.load(images_arg)
 y_test = np.load(masks_arg)
 
+X_test = X_test.reshape(X_test.shape + (1,))
+y_test = y_test.reshape(y_test.shape + (1,))
+
 print(X_test.shape)
 print(y_test.shape)
 
